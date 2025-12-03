@@ -1,0 +1,519 @@
+/* GENERAL */
+* {
+  box-sizing: border-box; /* يمنع تمدد العناصر خارج العرض */
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: #000;
+  overflow-x: hidden;  /* يمنع أي تمدد لليمين */
+  height: 100%;
+  width: 100%;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  background-color:  rgba(204, 95, 95, 0.073); /* توهج خفيف */
+  transition: transform 0.5s ease-in-out;
+
+}
+
+
+
+.navbar:hover {
+  background: rgba(232, 232, 245, 0.027); /* أبيض خفيف عند المرور */
+  box-shadow: 0 1px 5px rgba(255, 255, 255, 0.2); /* توهج خفيف */
+}
+
+.clink{
+  border-radius: 3px;
+
+}
+
+.clink:hover{
+  border-bottom: 2px solid rgba(207, 43, 43, 0.307);
+}
+
+.logo {
+ font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #ffff;
+    letter-spacing: 1px;
+      /* إضافة توهج ذهبي */
+  animation: goldenGlow 4s ease-in-out infinite alternate;
+}
+
+span{
+    color: #b1ed43;
+    font-style: italic;
+    font-size: 44px;
+}
+
+h1 span {
+    font-size: 55px;
+  
+}
+
+/* أنيميشن التوهج */
+@keyframes goldenGlow {
+  0% {
+    text-shadow:
+      0 0 2px rgba(230, 225, 199, 0.867),
+      0 0 2px rgba(242, 225, 127, 0.803),
+      0 0 2px rgba(239, 238, 231, 0.716);
+  }
+
+    50% {
+    text-shadow:
+      0 0 2px rgba(194, 178, 100, 0.867),
+      0 0 2px rgba(139, 136, 114, 0.803),
+      0 0 2px rgba(251, 223, 13, 0.716);
+  }
+  100% {
+    text-shadow:
+      0 0 12px rgba(255, 215, 0, 0.8),
+      0 0 22px rgba(255, 215, 0, 0.5),
+      0 0 52px rgba(255, 215, 0, 0.6);
+  }
+}
+
+.center-links {
+  display: flex;
+  gap: 30px;
+}
+
+.center-links a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.scan-btn {
+  padding: 10px 22px;
+  border-radius: 13px;
+  background: #da454515;
+  border: 1px solid rgba(207, 43, 43, 0.307);
+  color: rgba(235, 248, 137, 0.603);
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 1px 1px 1px rgba(255,255,255,0.2);
+  transition: all .5s ease-in-out;
+
+}
+
+.scan-btn:hover{
+  box-shadow: 0 1px 2px rgba(255, 255, 255, 0.51);
+  color: white;
+
+
+}
+
+/*======================================= HERO SECTION */
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://images.pexels.com/photos/10600332/pexels-photo-10600332.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  overflow: hidden; /* يمنع أي محتوى يتجاوز العنصر */
+}
+
+/* DARK OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* محتوى الشبكة القديمة (إذا أردت الاحتفاظ بها) */
+.grid-lines {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.07) 1px, transparent 1px);
+  background-size: 140px 140px;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* مربعات مستقلة أعلى اليمين */
+.top-right-boxes {
+  position: absolute;
+  top: 150px;       /* أول مربع من الأعلى */
+  right: 200px;     /* 200px من اليمين */
+  width: 200px;     /* حجم المربع */
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.35); /* تظليل أبيض واضح */
+  z-index: 5;
+  border-radius: 4px; 
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.top-right-boxes.second {
+  top: 500px;       /* 150px + 200px + 150px فاصل */
+  right: 200px;
+  width: 200px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.35); 
+  z-index: 5;
+  border-radius: 4px; 
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+/* CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  max-width: 500px;
+}
+
+.small-title {
+  font-size: 12px;
+  margin: 0 0 15px;
+  opacity: .8;
+}
+
+h1 {
+  font-size: 55px;
+  margin: 0 0 20px;
+  line-height: 1.1;
+}
+
+.desc {
+  font-size: 17px;
+  opacity: .9;
+  margin-bottom: 25px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn-main {
+  padding: 12px 25px;
+  background: white;
+  border: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 13px;
+  border-bottom: 2px solid rgba(207, 43, 43, 0.307);
+}
+
+.btn-secondary {
+  padding: 12px 25px;
+  border-radius: 13px;
+  background: transparent;
+  border: 1px solid rgba(231, 252, 73, 0.148);
+  color: white;
+  cursor: pointer;
+}
+.btnmsec{
+  transition: all .5s ease-in-out;  
+}
+
+.btnmsec:hover{
+  box-shadow: -1px -1px 2px rgba(252, 244, 244, 0.6);
+  background: rgb(224, 243, 57);
+  color: rgb(11, 28, 174);
+  border: none;
+
+}
+
+.btnmsecc:hover{
+  background:rgba(11, 27, 174, 0.223);
+  color:  rgb(224, 243, 57);
+}
+
+
+.secured {
+  margin-top: 20px;
+  font-size: 13px;
+  opacity: .7;
+}
+
+/* ======================================== تنسيق الخطوط البيضاء أسفل المناطق */
+.section {
+  position: relative;
+}
+
+.section:not(.bottom)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+
+
+/* ============================================ DOCTORS SECTION ===== */
+
+
+.doctors-section {
+  padding: 80px 50px;
+  background-color: #0a0a0a16; /* خلفية هادئة */
+  color: #fff;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 60px;
+}
+
+.doctor-card {
+  background: rgba(103, 93, 59, 0.425);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative; /* مهم للصور المطلقة */
+  overflow: visible; /* يسمح للصورة بالخروج فوق الكارد */
+  transform: rotate3d(11, 11, 1, -45deg);
+  border: #b1ed4347 1px solid;
+}
+
+.doctor-card-a{
+  color: #ffff;
+
+}
+
+.doctor-photo.john {
+  background-image: url('https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg');
+}
+
+.doctor-photo.jane {
+  background-image: url('https://images.pexels.com/photos/5214995/pexels-photo-5214995.jpeg');
+}
+
+.doctor-photo.alan {
+  background-image: url('https://images.pexels.com/photos/3846038/pexels-photo-3846038.jpeg');
+}
+
+.doctor-photo.emily {
+  background-image: url('https://images.pexels.com/photos/5407206/pexels-photo-5407206.jpeg');
+}
+
+
+.doctor-card:hover {
+  transform: translateY(44px);
+  box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.15);
+}
+
+
+.doctor-photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 11%;
+  background-color: rgba(255,255,255,0.1); /* مكان الصورة */
+  background-size: cover;
+  background-position: center;
+  position: relative; /* لتصليح الـ z-index */
+  top: -40px; /* يجعل الصورة تطلع فوق الكارد 50px */
+  z-index: 1;  /* الصورة فوق الكارد */
+  transition: all 0.5s ease-in-out;
+
+}
+
+
+.doctor-photo:hover{
+  transform: translateY(14px) translatex(4px);
+
+
+}
+
+.doctor-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+
+.doctor-specialty {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 5px;
+}
+
+.doctor-room {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+
+
+/* ===== DOCTORS SECTION BACKGROUND ===== */
+#doctors {
+  position: relative;
+  padding: 80px 50px;
+  color: #fff;
+  overflow: hidden;
+  /* صورة الخلفية سيتم وضعها لاحقًا */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+/* Overlay */
+#doctors::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.748); /* درجة التعتيم، يمكن تعديل النسبة */
+  z-index: 1;
+}
+
+/* التأكد أن محتوى البطاقات فوق الـ Overlay */
+.doctors-grid,
+.section-title {
+  position: relative;
+  z-index: 2;
+}
+
+#doctors {
+  background-image: url('https://images.pexels.com/photos/3683088/pexels-photo-3683088.jpeg');
+}
+
+
+/* =================================== footer style =============== */
+
+.footer {
+  background: linear-gradient(rgba(237, 248, 79, 0.075), rgba(36, 30, 200, 0.566)), #d01a1a5b;
+  color: #b1ed43;
+  text-align: center;
+  padding: 50px 20px 30px 20px;
+}
+
+.footer-logo {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.footer-quote {
+  font-size: 18px;
+  margin-bottom: 25px;
+  opacity: 0.8;
+}
+
+.footer-buttons a {
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-main-footer {
+  background: #b1ed43;
+  color: #000;
+}
+
+.btn-main-footer:hover {
+  background: #9fd13212;
+  border: 1px solid #b1ed43;
+  color: #b1ed43;
+
+
+}
+
+.btn-secondary-footer {
+  border: 1px solid #b1ed43;
+  color: #b1ed43;
+}
+
+.btn-secondary-footer:hover {
+  background: #b1ed43;
+  color: #000;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  opacity: 0.8;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.footer-social a {
+  margin: 0 12px;
+  font-size: 28px;
+  color: #b1ed43;
+  transition: 0.2s;
+}
+
+.footer-social a:hover {
+  color: white;
+  transform: scale(1.15);
+}
+
+
+
+/* ================================= ازرار التوجيه ================== */
+
+.scroll-buttons {
+  position: fixed;
+  right: 20px;
+  top: 27%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.scrl-btn  {
+  background: linear-gradient(45deg, #415e0b, #d8f73c);
+  box-shadow: -2px -2px 1px rgba(205, 226, 9, 0.603);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition:all  0.6s ease-in-out;
+  color: #ccccefe4;
+}
+
+.scroll-buttons button:hover {
+  background: linear-gradient(15deg, #415e0b, #d8f73c);
+  box-shadow: 1px 1px 1px rgba(83, 88, 34, 0.603);
+  color: #f3f3f4e4;
+  scale: 1.09;
+}

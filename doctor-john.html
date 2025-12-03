@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doctor Profile</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+
+    /* -----------------------------------
+       🔥 BACKGROUND WITH IMAGE + OVERLAY
+    ------------------------------------*/
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+
+      /* خلفية + Overlay محترم */
+      background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url('https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg');
+
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+
+      color: white;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+
+    .doc-header {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      padding: 40px 0;
+    }
+
+    .doc-photo {
+      width: 33%;
+      height: 380px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 15px;
+      border: 2px solid rgba(255,255,255,0.15);
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+
+    h1 {
+      font-size: 42px;
+      margin: 0;
+    }
+
+    .section-title {
+      font-size: 26px;
+      margin-top: 40px;
+      border-left: 4px solid #b1ed43;
+      padding-left: 10px;
+    }
+
+    .contact {
+      margin-top: 40px;
+      opacity: 0.8;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 18px;
+      margin-top: 15px;
+    }
+
+    .social-links a {
+      font-size: 28px;
+      color: #b1ed43;
+      transition: 0.2s;
+    }
+
+    .social-links a:hover {
+      color: white;
+      transform: scale(1.15);
+    }
+
+    .back-btn {
+      margin-top: 30px;
+      padding: 10px 22px;
+      background: transparent;
+      border: 1px solid #b1ed43;
+      color: #b1ed43;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .back-btn:hover {
+      background: #b1ed43;
+      color: black;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="doc-header">
+      <div class="doc-photo" style="background-image: url('https://images.pexels.com/photos/5452293/pexels-photo-5452293.jpeg');"></div>
+
+      <div>
+        <h1>Dr. John Doe</h1>
+        <p style="opacity:0.7">Ophthalmologist</p>
+      </div>
+    </div>
+
+    <!-- Degree -->
+    <h2 class="section-title">🎓 Latest Degree</h2>
+    <p>Doctor of Medicine (MD), Harvard University – Specialization in Ophthalmology.</p>
+
+    <!-- Skills -->
+    <h2 class="section-title">⭐ Skills & Achievements</h2>
+    <ul>
+      <li>12 years of experience in cornea and retina treatment</li>
+      <li>Performed over 2,500 successful laser surgeries</li>
+      <li>Researcher in artificial intelligence for eye disease diagnosis</li>
+      <li>Member of the International Association of Ophthalmology</li>
+    </ul>
+
+    <!-- Working Hours -->
+    <h2 class="section-title">⏰ Working Hours</h2>
+    <p>
+      Sunday – Wednesday: 10:00 AM – 5:00 PM <br>
+      Thursday: 12:00 PM – 4:00 PM
+    </p>
+
+    <!-- Contact -->
+    <div class="contact">
+      <h2 class="section-title">📱 Contact</h2>
+
+      <div class="social-links">
+        <a href="https://facebook.com/dr.john" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/doctor.john" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/970599000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <button class="back-btn" onclick="history.back()">⬅ Back</button>
+
+  </div>
+
+</body>
+</html>

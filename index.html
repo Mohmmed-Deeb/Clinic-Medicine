@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eye Health</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo"><span>E</span>yeHealth</div>
+
+    <nav class="center-links">
+      <a class="clink" href="#">AI Scan</a>
+      <a class="clink" href="#">Consult a Doctor</a>
+      <a class="clink" href="#">Vitamins</a>
+      <a class="clink" href="#">Contact</a>
+    </nav>
+
+    <button class="scan-btn">START YOUR SCAN</button>
+  </header>
+
+  <!-- direct div -->
+
+  <div class="scroll-buttons">
+    <button class="scrl-btn" onclick="scrollToSection('hero')">Hero</button>
+    <button class="scrl-btn" onclick="scrollToSection('doctors')">Doctors</button>
+    <button class="scrl-btn" onclick="scrollToSection('footer')">Footer</button>
+  </div>
+
+
+  <!-- HERO SECTION -->
+  <section  id="hero" class="hero">
+
+    <!-- GRID LINES -->
+    <div class="grid-lines"></div>
+
+    <div class="hero-content section top">
+      <p class="small-title">• AI EYE HEALTH SCAN</p>
+
+      <h1>Check <span>Your</span> Profile <br>Health in Seconds</h1>
+
+      <p class="desc">
+        Upload a photo of your eye, our AI detects early signs and recommends the right vitamins.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="btn-main btnmsec">Modern Medical Clinic</button>
+        <button class="btn-secondary btnmsec btnmsecc">HOW IT WORKS</button>
+      </div>
+
+      <p class="secured">Your photos and data stay protected</p>
+    </div>
+
+  </section>
+
+  <!-- DOCTORS SECTION -->
+<section id="doctors" class="doctors-section">
+  <h2 class="section-title">Meet Our Doctors</h2>
+  <div class="doctors-grid">
+    <div class="doctor-card">
+        <a href="doctor-john.html" class="doctor-card-a">
+          <div class="doctor-photo john"></div>
+          <h3 class="doctor-name">Dr. John Doe</h3>
+          <p class="doctor-specialty">Ophthalmologist</p>
+          <p class="doctor-room">Room 101</p>
+       </a>
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-photo jane"></div>
+        <a href="dr-jane-smith.html" class="doctor-card-a">
+          <h3 class="doctor-name">Dr. Jane Smith</h3>
+          <p class="doctor-specialty">Optometrist</p>
+          <p class="doctor-room">Room 102</p>
+       </a>
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-photo alan"></div>
+        <a href="dr-alan-brown.html" class="doctor-card-a">
+          <h3 class="doctor-name">Dr. Alan Brown</h3>
+          <p class="doctor-specialty">Retina Specialist</p>
+          <p class="doctor-room">Room 103</p>
+       </a>
+
+    </div>
+    <div class="doctor-card">
+      <div class="doctor-photo emily"></div>
+        <a href="dr-emily.white.html" class="doctor-card-a">
+          <h3 class="doctor-name">Dr. Emily White</h3>
+          <p class="doctor-specialty">Pediatric Ophthalmologist</p>
+          <p class="doctor-room">Room 104</p>
+       </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<section id="footer"> 
+  <footer class="footer">
+    <div class="footer-container">
+      <h2 class="footer-logo">EyeHealth Clinic</h2>
+      <p class="footer-quote">"Your vision is our mission."</p>
+
+      <div class="footer-buttons">
+        <a href="#" class="btn-main-footer">Book an Appointment</a>
+        <a href="#" class="btn-secondary-footer">Upload Eye Photo</a>
+      </div>
+
+      <div class="footer-contact">
+        <p>📍 123 Main St, City, Country</p>
+        <p>📞 +970 599 000 000</p>
+        <p>✉ info@eyehealth.com</p>
+      </div>
+
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+</section>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
