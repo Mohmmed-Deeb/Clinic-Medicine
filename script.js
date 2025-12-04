@@ -66,7 +66,7 @@ function scrollToSection(id) {
   }
 
   h1 {
-    font-size: 26px;
+    font-size: 20px;
   }
 
   .desc {
@@ -130,4 +130,5 @@ function scrollToSection(id) {
   }
 
 }
+
 
